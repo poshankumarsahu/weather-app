@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,22 +9,22 @@ const Header = () => {
           <Link to="/">Weather App</Link>
         </div>
         <nav className="app-nav">
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => isActive ? 'active' : ''}
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
             end
           >
             Home
           </NavLink>
-          <NavLink 
-            to="/about" 
-            className={({ isActive }) => isActive ? 'active' : ''}
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             About
           </NavLink>
-          <NavLink 
-            to="/contact" 
-            className={({ isActive }) => isActive ? 'active' : ''}
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Contact
           </NavLink>
@@ -32,6 +32,6 @@ const Header = () => {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

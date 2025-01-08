@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { fetchCurrentWeather } from '../api/weatherService';
+import React, { useState } from "react";
+import { fetchCurrentWeather } from "../api/weatherService";
 
 const WeatherReport = () => {
-  const [location, setLocation] = useState('');
+  const [location, setLocation] = useState("");
   const [weatherData, setWeatherData] = useState(null);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFetchWeather = async () => {
     setIsLoading(true);
-    setError('');
+    setError("");
     setWeatherData(null);
 
     try {
@@ -31,18 +31,18 @@ const WeatherReport = () => {
         placeholder="Enter location"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
-        style={{ padding: '10px', margin: '10px' }}
+        style={{ padding: "10px", margin: "10px" }}
       />
-      <button onClick={handleFetchWeather} style={{ padding: '10px' }}>
+      <button onClick={handleFetchWeather} style={{ padding: "10px" }}>
         Get Weather
       </button>
 
       {isLoading && <p>Loading...</p>}
 
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
 
       {weatherData && (
-        <div >
+        <div>
           <h2>{weatherData.location.name}</h2>
           <p>Temperature: {weatherData.current.temp_c}°C</p>
           <p>Condition: {weatherData.current.condition.text}</p>

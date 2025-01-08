@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "../common/Header";
 import WelcomePage from "../pages/WelcomePage";
 import AboutPage from "../pages/AboutPage";
@@ -22,6 +22,6 @@ const AppRoutes = () => {
       </div>
     </Router>
   );
-}
+};
 
 export default AppRoutes;
